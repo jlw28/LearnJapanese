@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "Lessons Page";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Lesson</title>
+</head>
+<body>
+    @model List<LearnJapanese.Models.Lesson>
+
+    <div style="text-align:center; margin: 50px 0;">
+        <h1>Lesson @Model.First().SetNumber: @Model.First().SetName</h1>
+    </div>
+    <div>
+        <div id="img_table">
+            <table class="table table-bordered">
+                <tr id="row">
+                    @foreach (var item in Model)
+                    {
+                        if (Model.Count == 3)
+                        {
+                            <td><img src=@item.img style="width:50%; height:60%; margin-left: 75px;"/></td>
+                        }
+                        else
+                        {
+                            <td><img src=@item.img width="200" height="275" /></td>
+                        }
+                    }
+                </tr>
+            </table>
+
+            <div class="col-md-6 col-md-offset-5">
+                <button id="btn_back" type="button" class="btn btn-primary btn-lg" style="margin-top:50px;" onclick="location.href='@Url.Action("SelectLesson", "Lesson")'">Back</button>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>Learn Japanese</h1>
+    <p class="lead">Learn how to read Japanese by learning the three Japanese syllable sets, Hiragana, Katakana, and Kanji. </p>
+</div>
+
+<div>
+    <div class="sel">
+        <div class="col-md-6 col-sm-offset-5" style="margin-top: 50px;">
+            <button id="btn_lessonSelect" type="button" class="btn btn-primary btn-lg" onclick="location.href='@Url.Action("SelectLesson", "Lesson")'">Lessons</button>
+        </div>
+        <div class="col-md-6 col-sm-offset-5" style="margin-top: 100px;">
+            <button id="btn_quizSelect" type="button" class="btn btn-info btn-lg">Quizzes</button>
+        </div>
+    </div>
+</div>

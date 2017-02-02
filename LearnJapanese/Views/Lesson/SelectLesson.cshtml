@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "Lessons Page";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <div style="text-align:center; margin-top:50px;">
+        <h1>Please Select Lesson Set: </h1>
+    </div>
+
+    <div class="col-md-6 col-sm-offset-4" style="margin-top: 50px; margin-bottom:50px; ">
+        <div class="lst_lesson">
+            <div>
+                <select multiple class="form-control" id="lst_select">
+                    <option value="1">1. Vowels</option>
+                    <option value="2">2. K Set</option>
+                    <option value="3">3. G Set</option>
+                    <option value="4">4. S Set</option>
+                    <option value="5">5. Z Set</option>
+                    <option value="6">6. T Set</option>
+                    <option value="7">7. D Set</option>
+                    <option value="8">8. N Set</option>
+                    <option value="9">9. H Set</option>
+                    <option value="10">10. B Set</option>
+                    <option value="11">11. P Set</option>
+                    <option value="12">12. M Set</option>
+                    <option value="13">13. R Set</option>
+                    <option value="14">14. Y Set</option>
+                    <option value="15">15. W Set</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin: 150px;">
+        <div class="col-md-6 col-sm-offset-3">
+                <button id="btn_cancel" type="button" class="btn btn-warning btn-lg" style="margin-right: 200px;" onclick="location.href='@Url.Action("Index", "Home")'">Cancel</button>
+                <button id="btn_lesson" type="button" class="btn btn-primary btn-lg">Start</button>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+    $('#btn_lesson').click(function () {
+
+        var id = $("#lst_select").val();
+        var text = $("#lst_select option:selected").text();
+      
+        var name = text.split(". ");
+        window.location.href = '@Url.Action("Lesson", "Lesson")?id=' + id + '&name=' + name[1];
+     
+    });
+</script>
