@@ -1,6 +1,9 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
+/// <summary>
+/// might be used in the future
+/// </summary>
 namespace LearnJapanese.Models
 {
     public class ExternalLoginConfirmationViewModel

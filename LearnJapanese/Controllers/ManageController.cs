@@ -8,6 +8,12 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using LearnJapanese.Models;
 
+
+
+
+/// <summary>
+/// might be used in the future
+/// </summary>
 namespace LearnJapanese.Controllers
 {
     [Authorize]

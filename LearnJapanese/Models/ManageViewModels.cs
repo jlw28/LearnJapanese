@@ -3,6 +3,9 @@ using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
 
+/// <summary>
+/// might be used in the future
+/// </summary>
 namespace LearnJapanese.Models
 {
     public class IndexViewModel

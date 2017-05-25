@@ -17,6 +17,7 @@ namespace LearnJapanese.Controllers
         //GET: Lesson
         public ActionResult Lesson(int id, string name)
         {
+            //*****needs to be reworked to query database for images*******
             //Retrieves images based on parameters selected 
             List<Models.Lesson> Set = new List<Models.Lesson>();
             if (id < 14)

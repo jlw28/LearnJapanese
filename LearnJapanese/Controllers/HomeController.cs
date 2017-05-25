@@ -10,6 +10,12 @@ namespace LearnJapanese.Controllers
     {
         public ActionResult Index()
         {
+            Models.DBModule db = new Models.DBModule();
+
+            //initial set up of images and quiz scores
+            db.saveImagesAsync();
+            db.saveQuiz();
+
             return View();
         }
 
